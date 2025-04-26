@@ -1,0 +1,704 @@
+/* src/App.css */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #ecf0f1;
+    --medium-gray: #bdc3c7;
+    --dark-gray: #95a5a6;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .app-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .app-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .app-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .app-nav a:hover {
+    border-color: white;
+  }
+  
+  /* Main Content */
+  .app-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Footer */
+  .app-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  /* Connect Wallet Button */
+  .connect-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .connect-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .account-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  /* Home Page */
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .cta-button.primary {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .cta-button.primary:hover {
+    background-color: #2980b9;
+  }
+  
+  .cta-button.secondary {
+    background-color: white;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .cta-button.secondary:hover {
+    background-color: var(--light-gray);
+  }
+  
+  /* Stats Section */
+  .stats {
+    margin-bottom: 3rem;
+  }
+  
+  .stats h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    
+  }
+  
+  .stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stat-card h3 {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .stat-value {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  /* Features Section */
+  .features {
+    margin-bottom: 3rem;
+  }
+  
+  .features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feature-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    margin-bottom: 3rem;
+    
+  }
+  
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .step {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-number {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+  }
+  
+  /* Forms */
+  .warranty-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .warranty-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .submit-button:disabled {
+    background-color: var(--medium-gray);
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    padding: 0.8rem;
+    background-color: #fadbd8;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .success-message {
+    color: var(--success-color);
+    padding: 0.8rem;
+    background-color: #d5f5e3;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Warranty List */
+  .warranty-list h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .warranty-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .warranty-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .warranty-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .warranty-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .warranty-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .warranty-content p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .warranty-status {
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  .warranty-status.valid {
+    background-color: #d5f5e3;
+    color: var(--success-color);
+  }
+  
+  .warranty-status.invalid {
+    background-color: #fadbd8;
+    color: var(--error-color);
+  }
+  
+  .warranty-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .view-button, .claim-button {
+    flex: 1;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .view-button {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+  }
+  
+  .view-button:hover {
+    background-color: var(--medium-gray);
+  }
+  
+  .claim-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .claim-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Warranty Details Page */
+  .warranty-details-page h1 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .warranty-container {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .warranty-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .warranty-image-container {
+    height: 100%;
+    min-height: 300px;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .warranty-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .warranty-image-placeholder {
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+  }
+  
+  .warranty-info {
+    padding: 2rem;
+  }
+  
+  .warranty-info h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .info-group {
+    margin-bottom: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .info-item .label {
+    flex: 1;
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  .info-item .value {
+    flex: 2;
+  }
+  
+  .info-item .value.address {
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 0.9rem;
+  }
+  
+  .info-item .value.status {
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .value.status.valid {
+    background-color: #d5f5e3;
+    color: var(--success-color);
+  }
+  
+  .value.status.invalid {
+    background-color: #fadbd8;
+    color: var(--error-color);
+  }
+  
+  .additional-info {
+    margin-bottom: 2rem;
+  }
+  
+  .additional-info h3 {
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+}
+
+.warranty-actions {
+  margin-top: 2rem;
+}
+
+.action-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.action-button.claim {
+  background-color: var(--secondary-color);
+  color: white;
+  width: 100%;
+}
+
+.action-button.claim:hover {
+  background-color: #2980b9;
+}
+
+.transfer-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.transfer-section h3 {
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+}
+
+.transfer-form .input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.transfer-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.action-button.transfer {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.action-button.transfer:hover {
+  background-color: #1e2b38;
+}
+
+.action-button:disabled {
+  background-color: var(--medium-gray);
+  cursor: not-allowed;
+}
+
+/* Loading and Error States */
+.loading, .error-message, .not-found, .no-warranties {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.loading {
+  color: var(--dark-gray);
+}
+
+.not-found, .no-warranties {
+  color: var(--dark-gray);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .app-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .app-wallet {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .connect-button {
+    width: 100%;
+  }
+  
+  .warranty-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .step {
+    flex: auto;
+    width: 100%;
+  }
+  
+  .transfer-form .input-group {
+    flex-direction: column;
+  }
+}
+
+.action-button.transfer {
+  background-color: var(--accent-color);
+  color: white;
+  width: 100%;
+}
+
+.action-button.transfer:hover {
+  background-color: #c0392b;
+}
