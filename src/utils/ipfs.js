@@ -2,9 +2,8 @@
 import axios from 'axios';
 
 // Set up Pinata API keys
-// You should store these in environment variables in a production environment
-const PINATA_API_KEY = '67710e8be4393ff36b0f';
-const PINATA_SECRET_API_KEY = 'cc52ce9edd52f415effafd9cd83d6e5971aaa03d89414411dc201f5f01208ce3';
+const PINATA_API_KEY = import.meta.env.VITE_PINATA_API_KEY;
+const PINATA_SECRET_API_KEY = import.meta.env.VITE_PINATA_SECRET_API_KEY;
 
 // Upload JSON metadata to IPFS via Pinata
 export const uploadJSONToIPFS = async (JSONBody) => {

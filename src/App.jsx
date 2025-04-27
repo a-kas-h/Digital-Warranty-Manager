@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ConnectWallet from './components/ConnectWallet';
